@@ -23,6 +23,14 @@ sudo cp md2htmlpdf /usr/bin/
 sudo chmod 755 /usr/bin/md2htmlpdf
 
 echo "================================================"
+echo "==> Modification des liens default.template"
+echo "==> et css.template"
+echo "================================================"
+
+ln -sfn ~/md2htmlpdf-master/templates/lesson.template ~/md2htmlpdf-master/templates/default.template
+ln -sfn ~/md2htmlpdf-master/css/lesson.css ~/md2htmlpdf-master/css/default.css
+
+echo "================================================"
 echo "==> Install config dir in ~/.config/md2htmlpdf/"
 echo "================================================"
 
