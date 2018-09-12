@@ -26,9 +26,10 @@ echo "================================================"
 echo "==> Modification des liens default.template"
 echo "==> et css.template"
 echo "================================================"
-
-ln -sfn ~/md2htmlpdf-master/templates/lesson.template ~/md2htmlpdf-master/templates/default.template
-ln -sfn ~/md2htmlpdf-master/css/lesson.css ~/md2htmlpdf-master/css/default.css
+rm $HOME/md2htmlpdf-master/templates/default.template
+rm $HOME/md2htmlpdf-master/css/default.css
+ln -sfn $HOME/md2htmlpdf-master/templates/lesson.template ~/md2htmlpdf-master/templates/default.template
+ln -sfn $HOME/md2htmlpdf-master/css/lesson.css ~/md2htmlpdf-master/css/default.css
 
 echo "================================================"
 echo "==> Install config dir in ~/.config/md2htmlpdf/"
