@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Author : Valéry Bruniaux
+# Modifié par ordinatous
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,7 +17,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 echo "================================================"
-echo "==> Install bin file in /usr/bin/"
+echo "==> Copie du fichier md2htmlpdf dans /usr/bin/"
 echo "================================================"
 
 sudo cp md2htmlpdf /usr/bin/
@@ -26,13 +27,12 @@ echo "================================================"
 echo "==> Modification des liens default.template"
 echo "==> et css.template"
 echo "================================================"
-#rm $HOME/md2htmlpdf-master/templates/default.template
-#rm $HOME/md2htmlpdf-master/css/default.css
+
 ln -sfn $HOME/md2htmlpdf/templates/lesson.template ~/md2htmlpdf/templates/default.template
 ln -sfn $HOME/md2htmlpdf/css/lesson.css ~/md2htmlpdf/css/default.css
 
 echo "================================================"
-echo "==> Install config dir in ~/.config/md2htmlpdf/"
+echo "==> Creation du repertoire  ~/.config/md2htmlpdf/"
 echo "================================================"
 
 mkdir $HOME/.config/md2htmlpdf
@@ -40,5 +40,5 @@ cp -R -i css $HOME/.config/md2htmlpdf/
 cp -R -i templates $HOME/.config/md2htmlpdf/
 
 echo "================================================"
-echo "==> Install completed ..."
+echo "==> Installation  terminée ..."
 echo "================================================"
